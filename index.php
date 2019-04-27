@@ -26,12 +26,18 @@ require_once("config.php");
 //echo $newUser;
 
 // Alterando dados do usuário
-$updateUser = new Usuario();
+//$updateUser = new Usuario();
+//$updateUser->loadById(11);
+//$updateUser->update("Beta", "1597534682");
+//echo $updateUser;
 
-$updateUser->loadById(11);
+//
+$deleteUser = new Usuario();
 
-$updateUser->update("Beta", "1597534682");
+$deleteUser->loadById(9);
 
-echo $updateUser;
+$deleteUser->delete();
+
+echo $deleteUser;
 
 ?>
