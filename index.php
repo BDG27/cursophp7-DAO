@@ -20,12 +20,18 @@ require_once("config.php");
 //$login->login("Bruno", "456789");
 //echo $login;
 
-// Cria um novo usuário
+// Criando um novo usuário
+//$newUser = new Usuario("Iron Man", "!@#$");
+//$newUser->insert();
+//echo $newUser;
 
-$newUser = new Usuario("Iron Man", "!@#$");
+// Alterando dados do usuário
+$updateUser = new Usuario();
 
-$newUser->insert();
+$updateUser->loadById(11);
 
-echo $newUser;
+$updateUser->update("Beta", "1597534682");
+
+echo $updateUser;
 
 ?>
